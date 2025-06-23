@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100 text-white">
+
+    <header class="flex items-center justify-between px-6 py-4 bg-gray-800 shadow-md">
+        <div class="flex items-center space-x-2">
+            <img src="image/12-2-home-download-png.png" alt="Logo" class="h-6 w-6">
+            <span class="text-xl font-bold">NL PROPERTY </span>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-yellow-400">Home</a>
+            <a href="#" class="hover:text-yellow-400">About</a>
+            <a href="#" class="hover:text-yellow-400">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-1 bg-gray-700 px-2 py-1 rounded-full">
+                <img src="https://flagcdn.com/us.svg" class="h-4 w-6 rounded-sm" alt="Flag">
+                <span>English</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+            <button>
+                <i
+                    class="pt-1 items-center fa-regular fa-heart w-6 h-6 text-black hover:text-yellow-400 rounded-full bg-white "></i>
+            </button>
+            <button>
+
+                <i
+                    class="pt-1 fa-solid fa-user-tie w-6 h-6 text-black hover:text-yellow-400 rounded-full bg-white "></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- background img  -->
+    <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('image/our_Platform.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+            <h1 class="text-white text-4xl md:text-6xl font-bold text-center px-4">
+                How Renting Works On<br />
+                Our Platform
+            </h1>
+        </div>
+    </section>
+
+    <section class="bg-[#FFFEEB]  p-10 text-center">
+        <div class="mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                Hoe werkt het?
+            </h2>
+            <p class="text-gray-600 text-xl">Homes that we have just discovered</p>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="mx-[20%] grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-5">
+
+            <div
+                class="w-[250px] h-[250px]  bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border">
+
+                <div class="pt-10"><i class="fa-solid fa-1 bg-amber-300 p-5 rounded-md"></i></div>
+                <div class="  bg-white p-10 w-full object-cover">
+
+                    <h1 class="font-semibold text-gray-800 text-lg">SIGN UP</h1>
+
+                    <p class="text-sm text-gray-600 text-lg mb-3 font-medium">Create your account in just a few minutes
+                        and start searching right away.</p>
+                </div>
+            </div>
+
+            <div
+                class="w-[250px] h-[250px] bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border">
+
+                <div class="pt-10"><i class="fa-solid fa-2 bg-amber-300 p-5 rounded-md"></i></div>
+                <div class=" bg-white p-10 w-full object-cover">
+
+                    <h1 class="font-semibold text-gray-800 text-lg">Find A Home</h1>
+
+                    <p class="text-sm text-gray-600 text-lg mb-3 font-medium">Discover your dream rental in your
+                        favorite city using our handy filters.</p>
+                </div>
+            </div>
+
+            <div
+                class="w-[250px] h-[250px] bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border">
+
+                <div class="pt-10"><i class="fa-solid fa-3 bg-amber-300 p-5 rounded-md"></i></div>
+                <div class=" bg-white p-10 w-full object-cover">
+
+                    <h1 class="font-semibold text-gray-800 text-lg">Stay Updated</h1>
+
+                    <p class="text-sm text-gray-600 text-lg mb-3 font-medium">Create your account in just a few minutes
+                        and start searching right away..</p>
+                </div>
+            </div>
+
+            <div
+                class="w-[250px] h-[250px] bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border">
+
+                <div class="pt-10"><i class="fa-solid fa-4 bg-amber-300 p-5 rounded-md"></i></div>
+                <div class=" bg-white p-10 w-full object-cover">
+
+                    <h1 class="font-semibold text-gray-800 text-lg">Time To Move</h1>
+
+                    <p class="text-sm text-gray-600 text-lg mb-3 font-medium">Create your account in just a few minutes
+                        and start searching right away.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white px-6 py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+
+            <!-- Text Content -->
+            <div class="max-w-xl">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-4">Why Choose For HuurScanner</h2>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    At HuurScanner, we believe that finding a rental home should be simple and stress-free, even if you
+                    don’t speak Dutch.
+                    Our platform is built to make your search fast, easy, and accessible for everyone. Whether you're an
+                    expat, international
+                    student, or just looking for a new place, HuurScanner helps you find homes that match your budget
+                    and location.
+                    With smart filters, regular updates, and the ability to contact landlords directly, you're always
+                    one step closer to your next home.
+                    No hassle, no confusion, just a smooth path to renting.
+                </p>
+                <a href="#"
+                    class="inline-block bg-yellow-500 text-white px-6 py-3 rounded hover:bg-yellow-600 transition">
+                    Explore your home
+                </a>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-shrink-0">
+                <img src="image/Subtract (1).png" alt="Modern house"
+                    class="rounded-[40px] w-full max-w-md object-cover shadow-lg" />
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="relative w-full bg-white text-black">
+            <div class="mx-auto px-5">
+                <div class="flex flex-col items-center">
+                    <h2 class="mt-5 text-center text-4xl font-bold">FAQ</h2>
+                </div>
+                <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+                    <div class="py-5">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                                <span>How often do you search rental websites?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fedeIn mt-3 text-neutral-600">Every 2 minutes our search bots
+                                scour the internet to find your ideal rental.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -4,25 +4,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./output.css">
     <title>Planet</title>
 </head>
 
 <body>
-
-
     <header>
-        <div>
-            <ul class="text-center">
-                <li>About Us</li>
-                <li>Order Tracking</li>
-                <li>Contact Us</li>
-                <li>FAQs</li>
-            </ul>
+        <div class="hidden border-b border-stroke dark:border-dark-3 sm:block">
+            <div class="container mx-auto">
+                <div class="-mx-4 flex flex-wrap items-center">
+                    <div class="w-full px-4 md:w-2/3 lg:w-1/2">
+                        <ul class="-mx-3 flex items-center">
+                            <li><a
+                                    class="inline-block px-3 py-4 text-sm font-medium text-body-color hover:text-primary dark:text-dark-6">About
+                                    Us</a>
+                            </li>
+                            <li><a
+                                    class="inline-block px-3 py-4 text-sm font-medium text-body-color hover:text-primary dark:text-dark-6">Order
+                                    Tracking
+                                </a>
+                            </li>
+                            <li><a
+                                    class="inline-block px-3 py-4 text-sm font-medium text-body-color hover:text-primary dark:text-dark-6">Contact
+                                    Us
+                                </a>
+                            </li>
+                            <li><a
+                                    class="inline-block px-3 py-4 text-sm font-medium text-body-color hover:text-primary dark:text-dark-6">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full px-4 md:w-1/3 lg:w-1/2">
+                        <div class="hidden items-center justify-end md:flex">
+                            <div>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none rounded-lg bg-transparent py-3 pl-3 pr-5 text-sm font-medium text-body-color outline-none transition dark:text-dark-6">
+                                        <option class="dark:bg-dark-2">English</option>
+                                        <option class="dark:bg-dark-2">Urdu</option>
+                                        <option class="dark:bg-dark-2">Hindi</option>
+                                    </select>
+                                    <span
+                                        class="absolute right-0 top-1/2 -translate-y-1/2 text-body-color dark:text-dark-6">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none rounded-lg bg-transparent py-3 pl-3 pr-5 text-sm font-medium text-body-color outline-none transition dark:text-dark-6">
+                                        <option class="dark:bg-dark-2">USD</option>
+                                        <option class="dark:bg-dark-2">INR</option>
+                                        <option class="dark:bg-dark-2">ERU</option>
+                                    </select>
+                                    <span
+                                        class="absolute right-0 top-1/2 -translate-y-1/2 text-body-color dark:text-dark-6">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="container mx-auto">
+            <div class="relative -mx-4 flex items-center justify-center sm:justify-between">
+                <div class="w-60 max-w-full px-4 lg:w-48">
+                    <a href="index.html" class="block w-full py-5 lg:py-3">
+                        <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/logo/logo-primary.svg"
+                            alt="logo" class="hidden w-full dark:block">
+                    </a>
+                </div>
+                <div class="flex w-full items-center justify-end px-4 lg:justify-between">
+                    <div class="flex w-full items-center justify-between px-4">
+                        <div class="w-full">
+                            <nav>
+                                <ul class="block items-center lg:flex">
+                                    <li>
+                                        <a
+                                            class="flex justify-between py-2 text-base font-medium text-dark hover:text-primary dark:text-dark lg:mx-5 lg:inline-flex lg:py-6 2xl:mx-[18px]">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="flex justify-between py-2 text-base font-medium text-dark hover:text-primary dark:text-dark lg:mx-5 lg:inline-flex lg:py-6 2xl:mx-[18px]">
+                                            Shop
+                                        </a>
+                                    </li>
+                                    <li class="group relative lg:py-4">
+                                        <a class="font-medium 2xl:mx-[18px]">
+                                            Products
+                                            <span class="pl-[6px]">
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </span>
+                                        </a>
 
+                                        <div :class="!submenuOpen ? 'hidden lg:block' : 'block' "
+                                            class="relative z-50 left-0 top-full z-10 rounded-[5px] bg-dark px-2 transition-all group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[115%] lg:w-[600px] lg:border-[.5px] lg:border-stroke lg:px-[50px] lg:pb-7 lg:pt-9 lg:opacity-0 lg:group-hover:visible lg:group-hover:top-full dark:lg:border-dark-3 xl:w-[700px] hidden lg:block">
+                                            <span
+                                                class="absolute -top-[6px] left-8 -z-10 hidden h-3 w-3 rotate-45 rounded-sm border-[.5px] border-b-0 border-r-0 border-stroke bg-dark dark:border-dark-3 dark:bg-dark-2 lg:block xl:left-10"></span>
+                                            <div class="-mx-4 flex flex-wrap lg:justify-center">
+                                                <div class="w-full px-4 lg:w-1/3">
+                                                    <div>
+                                                        <h3
+                                                            class="mb-[14px] text-base font-semibold text-dark dark:text-dark">
+                                                            New Arrivals
+                                                        </h3>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Dresses
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Jackets
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Sweatshirts
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Tops &amp; Tees
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Party Dresses
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full px-4 lg:w-1/3">
+                                                    <div>
+                                                        <h3
+                                                            class="mb-[14px] text-base font-semibold text-dark dark:text-dark">
+                                                            New Arrivals
+                                                        </h3>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Dresses
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Jackets
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Sweatshirts
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Tops &amp; Tees
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Party Dresses
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full px-4 lg:w-1/3">
+                                                    <div>
+                                                        <h3
+                                                            class="mb-[14px] text-base font-semibold text-dark dark:text-dark">
+                                                            New Arrivals
+                                                        </h3>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Dresses
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Jackets
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Sweatshirts
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Tops &amp; Tees
+                                                        </a>
+                                                        <a
+                                                            class="block py-[6px] text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                            Party Dresses
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="flex justify-between py-2 text-base font-medium text-dark hover:text-primary dark:text-dark lg:mx-5 lg:inline-flex lg:py-6 2xl:mx-[18px]">
+                                            Accessories
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="flex justify-between py-2 text-base font-medium text-dark hover:text-primary dark:text-dark lg:mx-5 lg:inline-flex lg:py-6 2xl:mx-[18px]">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="hidden w-full items-center justify-end space-x-4 pr-[70px] sm:flex lg:pr-0">
+                        <div class="hidden items-center pr-1 xl:flex">
+                            <div
+                                class="mr-3 flex h-[42px] w-[42px] items-center justify-center rounded-full border-[.5px] border-stroke bg-gray-2 text-dark dark:border-dark-3 dark:bg-dark-2 dark:text-dark">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-dark dark:text-dark">
+                                    Need Help?
+                                    <br>
+                                    +001 123 456 789
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                class="relative flex h-[42px] w-[42px] items-center justify-center rounded-full border-[.5px] border-stroke bg-gray-2 text-dark dark:border-dark-3 dark:bg-dark-2 dark:text-dark">
+                                <i class="fa-solid fa-person"></i>
+                            </button>
+                        </div>
+                        <div class="relative z-20">
+                            <div class="flex max-w-[200px] justify-end">
+                                <button @click="wishlistOpen = !wishlistOpen"
+                                    class="relative flex h-[42px] w-[42px] items-center justify-center rounded-full border-[.5px] border-stroke bg-gray-2 text-dark dark:border-dark-3 dark:bg-dark-2 dark:text-dark">
+                                    <i class="fa-regular fa-heart"></i>
 
+                                    <span
+                                        class="absolute bg-blue-500 -right-1 -top-1 h-[18px] w-[18px] rounded-full bg-primary text-[10px] font-semibold leading-[18px] text-white">
+                                        3
+                                    </span>
+                                </button>
+                            </div>
+                            <div x-show="wishlistOpen" @click.outside="wishlistOpen = false"
+                                class="absolute right-0 top-full mt-3 w-[330px]" style="display: none;">
+                                <div
+                                    class="overflow-hidden rounded-lg border border-stroke bg-dark px-6 py-8 shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-box-dark">
+                                    <div class="border-b border-stroke pb-3 dark:border-dark-3">
+                                        <div class="-mx-1 flex items-center justify-between pb-4">
+                                            <div class="flex items-center px-1">
+                                                <div class="mr-3 h-10 w-full max-w-[40px] overflow-hidden rounded">
+                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-02.jpg"
+                                                        alt="product image" class="w-full">
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        class="text-sm font-medium text-dark hover:text-primary dark:text-dark">
+                                                        Circular Sienna
+                                                    </a>
+                                                    <p
+                                                        class="truncate text-xs font-medium text-body-color dark:text-dark-6">
+                                                        Awesome white shirt
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-semibold text-dark dark:text-dark">
+                                                    $36.00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="-mx-1 flex items-center justify-between py-4">
+                                            <div class="flex items-center px-1">
+                                                <div class="mr-3 h-10 w-full max-w-[40px] overflow-hidden rounded">
+                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-03.jpg"
+                                                        alt="product image" class="w-full">
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        class="text-sm font-medium text-dark hover:text-primary dark:text-dark">
+                                                        Black T-shirt
+                                                    </a>
+                                                    <p
+                                                        class="truncate text-xs font-medium text-body-color dark:text-dark-6">
+                                                        It's a nice black t-shirt
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-semibold text-dark dark:text-dark">
+                                                    $36.00
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button
+                                            class="flex w-full items-center justify-center rounded-md bg-primary px-10 py-[10px] text-center text-base font-medium text-dark hover:bg-blue-dark">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative z-20">
+                            <div class="flex max-w-[200px] justify-end">
+                                <button @click="cartOpen = !cartOpen"
+                                    class="relative flex h-[42px] w-[42px] items-center justify-center rounded-full border-[.5px] border-stroke bg-gray-2 text-dark dark:border-dark-3 dark:bg-dark-2 dark:text-dark">
+                                    <i class="fa-solid fa-box"></i>
+
+                                    <span
+                                        class="absolute bg-blue-500 -right-1 -top-1 h-[18px] w-[18px] rounded-full bg-primary text-[10px] font-semibold leading-[18px] text-white">
+                                        1
+                                    </span>
+                                </button>
+                            </div>
+                            <div x-show="cartOpen" @click.outside="cartOpen = false"
+                                class="absolute right-0 top-full mt-3 w-[330px]" style="display: none;">
+                                <div
+                                    class="overflow-hidden rounded-lg bg-dark p-8 shadow-1 dark:bg-dark-2 dark:shadow-box-dark">
+                                    <div class="mb-5 border-b border-stroke pb-3 dark:border-dark-3">
+                                        <div class="-mx-1 flex items-center justify-between pb-4">
+                                            <div class="flex items-center px-1">
+                                                <div class="mr-3 h-10 w-full max-w-[40px] overflow-hidden rounded">
+                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-02.jpg"
+                                                        alt="product image" class="w-full">
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        class="text-sm font-medium text-dark hover:text-primary dark:text-dark">
+                                                        Circular Sienna
+                                                    </a>
+                                                    <p
+                                                        class="truncate text-xs font-medium text-body-color dark:text-dark-6">
+                                                        Awesome white shirt
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-semibold text-dark dark:text-dark">
+                                                    $36.00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="-mx-1 flex items-center justify-between py-4">
+                                            <div class="flex items-center px-1">
+                                                <div class="mr-3 h-10 w-full max-w-[40px] overflow-hidden rounded">
+                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-03.jpg"
+                                                        alt="product image" class="w-full">
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        class="text-sm font-medium text-dark hover:text-primary dark:text-dark">
+                                                        Black T-shirt
+                                                    </a>
+                                                    <p
+                                                        class="truncate text-xs font-medium text-body-color dark:text-dark-6">
+                                                        It's a nice black t-shirt
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-semibold text-dark dark:text-dark">
+                                                    $36.00
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="-mx-1 border-b border-stroke pb-5 dark:border-dark-3">
+                                        <div class="mb-3 flex items-center justify-between">
+                                            <div class="px-1">
+                                                <p class="text-base text-dark dark:text-dark">
+                                                    Subtotal
+                                                </p>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-medium text-dark dark:text-dark">
+                                                    $108
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 flex items-center justify-between">
+                                            <div class="px-1">
+                                                <p class="text-base text-dark dark:text-dark">
+                                                    Shipping Cost (+)
+                                                </p>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-medium text-dark dark:text-dark">
+                                                    $10.85
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <div class="px-1">
+                                                <p class="text-base text-dark dark:text-dark">
+                                                    Discount (-)
+                                                </p>
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="text-base font-medium text-dark dark:text-dark">
+                                                    $9.00
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="-mx-1 flex items-center justify-between pb-6 pt-5">
+                                        <div class="px-1">
+                                            <p class="text-base text-dark dark:text-dark">
+                                                Total Payable
+                                            </p>
+                                        </div>
+                                        <div class="px-1">
+                                            <p class="text-base font-medium text-dark dark:text-dark">
+                                                $88.15
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button
+                                            class="flex w-full items-center justify-center rounded-md bg-primary px-10 py-[13px] text-center text-base font-medium text-dark hover:bg-blue-dark">
+                                            Place Order
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <!-- eCommerce Header Section  -->
+
+    <section class="py-10 dark:bg-dark">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full px-4 lg:w-8/12">
+                    <div class="relative mb-8 h-[370px] md:h-[480px]">
+                        <img src="src/assets/ecom-images/headers/header-04/image-01.jpg" alt="product"
+                            class="h-full w-full object-cover object-center">
+
+                        <div class="absolute left-0 top-0 flex h-full w-full items-center px-8 md:px-12">
+                            <div class="max-w-[420px]">
+                                <h3>
+                                    <a href="javascript:void(0)"
+                                        class="mb-5 block text-2xl font-bold text-dark hover:text-primary sm:text-4xl">
+                                        Mega Sale Up To 50% Off For All
+                                    </a>
+                                </h3>
+                                <p class="mb-9 text-base text-body-color">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Vestibulum ornare vestibulum mollis. Nam vitae augue purus.
+                                    Integer ac accumsan nunc.
+                                </p>
+                                <a href="javascript:void(0)"
+                                    class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-[13px] text-center text-base font-medium text-white hover:bg-blue-dark">
+                                    Grab The Offer
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-4/12">
+                    <div class="-mx-4 flex flex-wrap">
+                        <div class="w-full px-4 md:w-1/2 lg:w-full">
+                            <div class="relative mb-8 h-[223px]">
+                                <img src="src/assets/ecom-images/headers/header-04/image-02.jpg" alt="product"
+                                    class="h-full w-full object-cover object-center">
+
+                                <div class="absolute left-0 top-0 flex h-full w-full items-end justify-end p-6 sm:p-9">
+                                    <div class="max-w-[180px] text-right">
+                                        <h3>
+                                            <a href="javascript:void(0)"
+                                                class="mb-3 block text-xl font-bold text-dark hover:text-primary xl:text-2xl">
+                                                Summer Travel Collection
+                                            </a>
+                                        </h3>
+                                        <a href="javascript:void(0)"
+                                            class="text-base font-medium text-dark hover:text-primary">
+                                            Discover Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 md:w-1/2 lg:w-full">
+                            <div class="relative mb-8 h-[223px]">
+                                <img src="src/assets/ecom-images/headers/header-04/image-03.jpg" alt="product"
+                                    class="h-full w-full object-cover object-center">
+
+                                <div class="absolute left-0 top-0 flex h-full w-full items-end justify-end p-6 sm:p-9">
+                                    <div class="max-w-[180px] text-right">
+                                        <h3>
+                                            <a href="javascript:void(0)"
+                                                class="mb-3 block text-xl font-bold text-dark hover:text-primary xl:text-2xl">
+                                                Get 30% Off On iPhone
+                                            </a>
+                                        </h3>
+                                        <a href="javascript:void(0)"
+                                            class="text-base font-medium text-dark hover:text-primary">
+                                            Shop Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 

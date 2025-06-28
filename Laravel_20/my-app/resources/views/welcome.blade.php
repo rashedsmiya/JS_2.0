@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>MyCarRental</title>
 </head>
-    
+
 <body class="bg-gray-50">
     <!-- navigason -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -17,7 +17,7 @@
                 <div class="flex items-center space-x-3">
                     <div
                         class="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600  rounded-full flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold">M</span>
+                        <a href="#" class="text-white text-2xl font-bold">M</a>
                     </div>
                     <div>
                         <span
@@ -52,7 +52,7 @@
             </div>
         </div>
     </nav>
-   
+
     <!-- Hero Section  -->
     <section class="pt-32 pb-40 bg-gradient-to-r from-indigo-900 to-purple-900 text-white overflow-hidden " id="he">
         <div
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
         </div>
     </section>
 

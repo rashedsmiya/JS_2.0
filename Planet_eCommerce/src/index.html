@@ -83,7 +83,18 @@
                 <div class="flex w-full items-center justify-end px-4 lg:justify-between">
                     <div class="flex w-full items-center justify-between px-4">
                         <div class="w-full">
-                            <nav>
+                            <button @click="navbarOpen = !navbarOpen"
+                                :class="navbarOpen &amp;&amp; 'navbarTogglerActive' " id="navbarToggler"
+                                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+                                <span
+                                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-dark-6"></span>
+                                <span
+                                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-dark-6"></span>
+                                <span
+                                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-dark-6"></span>
+                            </button>
+                            <nav :class="!navbarOpen &amp;&amp; 'hidden' " id="navbarCollapse"
+                                class="absolute right-4 top-full w-full max-w-[250px] justify-center rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:flex lg:w-full lg:max-w-full lg:justify-end lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none dark:lg:bg-transparent hidden">
                                 <ul class="block items-center lg:flex">
                                     <li>
                                         <a
@@ -445,14 +456,13 @@
             <div class="-mx-4 flex flex-wrap">
                 <div class="w-full px-4 lg:w-8/12">
                     <div class="relative mb-8 h-[370px] md:h-[480px]">
-                        <img src="src/assets/ecom-images/headers/header-04/image-01.jpg" alt="product"
-                            class="h-full w-full object-cover object-center">
+                        <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/headers/header-04/image-01.jpg"
+                            alt="product" class="h-full w-full object-cover object-center">
 
                         <div class="absolute left-0 top-0 flex h-full w-full items-center px-8 md:px-12">
                             <div class="max-w-[420px]">
                                 <h3>
-                                    <a href="javascript:void(0)"
-                                        class="mb-5 block text-2xl font-bold text-dark hover:text-primary sm:text-4xl">
+                                    <a class="mb-5 block text-2xl font-bold text-dark hover:text-primary sm:text-4xl">
                                         Mega Sale Up To 50% Off For All
                                     </a>
                                 </h3>
@@ -461,8 +471,8 @@
                                     Vestibulum ornare vestibulum mollis. Nam vitae augue purus.
                                     Integer ac accumsan nunc.
                                 </p>
-                                <a href="javascript:void(0)"
-                                    class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-[13px] text-center text-base font-medium text-white hover:bg-blue-dark">
+                                <a
+                                    class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-[13px] text-center text-base font-medium text-white hover:bg-blue-dark bg-blue-500">
                                     Grab The Offer
                                 </a>
                             </div>
@@ -473,19 +483,18 @@
                     <div class="-mx-4 flex flex-wrap">
                         <div class="w-full px-4 md:w-1/2 lg:w-full">
                             <div class="relative mb-8 h-[223px]">
-                                <img src="src/assets/ecom-images/headers/header-04/image-02.jpg" alt="product"
-                                    class="h-full w-full object-cover object-center">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/headers/header-04/image-02.jpg"
+                                    alt="product" class="h-full w-full object-cover object-center">
 
                                 <div class="absolute left-0 top-0 flex h-full w-full items-end justify-end p-6 sm:p-9">
                                     <div class="max-w-[180px] text-right">
                                         <h3>
-                                            <a href="javascript:void(0)"
+                                            <a
                                                 class="mb-3 block text-xl font-bold text-dark hover:text-primary xl:text-2xl">
                                                 Summer Travel Collection
                                             </a>
                                         </h3>
-                                        <a href="javascript:void(0)"
-                                            class="text-base font-medium text-dark hover:text-primary">
+                                        <a class="text-base font-medium text-dark hover:text-primary">
                                             Discover Now
                                         </a>
                                     </div>
@@ -494,19 +503,18 @@
                         </div>
                         <div class="w-full px-4 md:w-1/2 lg:w-full">
                             <div class="relative mb-8 h-[223px]">
-                                <img src="src/assets/ecom-images/headers/header-04/image-03.jpg" alt="product"
-                                    class="h-full w-full object-cover object-center">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/headers/header-04/image-03.jpg"
+                                    alt="product" class="h-full w-full object-cover object-center">
 
                                 <div class="absolute left-0 top-0 flex h-full w-full items-end justify-end p-6 sm:p-9">
                                     <div class="max-w-[180px] text-right">
                                         <h3>
-                                            <a href="javascript:void(0)"
+                                            <a
                                                 class="mb-3 block text-xl font-bold text-dark hover:text-primary xl:text-2xl">
                                                 Get 30% Off On iPhone
                                             </a>
                                         </h3>
-                                        <a href="javascript:void(0)"
-                                            class="text-base font-medium text-dark hover:text-primary">
+                                        <a class="text-base font-medium text-dark hover:text-primary">
                                             Shop Now
                                         </a>
                                     </div>
@@ -518,6 +526,756 @@
             </div>
         </div>
     </section>
+
+    <!-- You may also like -->
+
+    <section class="pb-8 pt-20 dark:bg-dark">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full px-4">
+                    <div class="mx-auto mb-[65px] max-[510px] text-center">
+                        <h2
+                            class="mb-4 text-3xl font-bold text-dark dark:text-black sm:text-4xl md:text-[40px] md:leading-[1.2]">
+                            You may also like
+                        </h2>
+                        <span class="mx-auto mb-[18px] block h-[3px] w-[100px] bg-blue-500"></span>
+                        <p class="text-base text-body-color dark:text-dark-6">There are many variations of passages of
+                            Lorem Ipsum
+                            available but
+                            the
+                            majority
+                            have
+                            suffered
+                            alteration in
+                            some form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="relative w-full pb-14">
+                    <div class="flex-no-wrap snap mx-auto flex h-auto w-full max-w-[300px] overflow-hidden transition-all xs:max-w-[400px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]"
+                        x-ref="carousel">
+                        <div
+                            class="mx-auto h-full min-w-[300px] px-4 xs:min-w-[368px] sm:min-w-[510px] md:min-w-[340px] lg:min-w-[312px] xl:min-w-[282px] 2xl:min-w-[325px]">
+                            <div
+                                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 dark:bg-dark-2 dark:shadow-box-dark border-2 border-gray-100 ...">
+
+                                <div class="relative">
+                                    <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/product-carousel-02/image-01.jpg"
+                                        alt="product" class="w-full">
+                                    <span
+                                        class="absolute left-6 top-4 inline-flex items-center justify-center rounded bg-red-600 px-[10px] py-[3px] text-sm font-medium text-black">
+                                        Hot
+                                    </span>
+                                </div>
+
+                                <div class="px-6 pb-8 pt-6 text-center">
+                                    <h3>
+                                        <a
+                                            class="mb-[5px] block text-lg font-semibold text-dark hover:text-primary dark:text-black xs:text-xl">
+                                            Stylish Women Bag
+                                        </a>
+                                    </h3>
+                                    <p class="text-lg font-medium text-dark dark:text-black">
+                                        £75.00
+                                    </p>
+                                    <div class="flex items-center justify-center gap-1 pb-5 pt-[18px]">
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button
+                                            class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-dark bg-amber-400">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="mx-auto h-full min-w-[300px] px-4 xs:min-w-[368px] sm:min-w-[510px] md:min-w-[340px] lg:min-w-[312px] xl:min-w-[282px] 2xl:min-w-[325px]">
+                            <div
+                                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 dark:bg-dark-2 dark:shadow-box-dark border-2 border-gray-100 ...">
+
+                                <div class="relative">
+                                    <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/product-carousel-02/image-01.jpg"
+                                        alt="product" class="w-full">
+                                    <span
+                                        class="absolute left-6 top-4 inline-flex items-center justify-center rounded bg-red-600 px-[10px] py-[3px] text-sm font-medium text-black">
+                                        Hot
+                                    </span>
+                                </div>
+
+                                <div class="px-6 pb-8 pt-6 text-center">
+                                    <h3>
+                                        <a
+                                            class="mb-[5px] block text-lg font-semibold text-dark hover:text-primary dark:text-black xs:text-xl">
+                                            Stylish Women Bag
+                                        </a>
+                                    </h3>
+                                    <p class="text-lg font-medium text-dark dark:text-black">
+                                        £75.00
+                                    </p>
+                                    <div class="flex items-center justify-center gap-1 pb-5 pt-[18px]">
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button
+                                            class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-dark bg-amber-400">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="mx-auto h-full min-w-[300px] px-4 xs:min-w-[368px] sm:min-w-[510px] md:min-w-[340px] lg:min-w-[312px] xl:min-w-[282px] 2xl:min-w-[325px]">
+                            <div
+                                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 dark:bg-dark-2 dark:shadow-box-dark border-2 border-gray-100 ...">
+
+                                <div class="relative">
+                                    <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/product-carousel-02/image-01.jpg"
+                                        alt="product" class="w-full">
+                                    <span
+                                        class="absolute left-6 top-4 inline-flex items-center justify-center rounded bg-red-600 px-[10px] py-[3px] text-sm font-medium text-black">
+                                        Hot
+                                    </span>
+                                </div>
+
+                                <div class="px-6 pb-8 pt-6 text-center">
+                                    <h3>
+                                        <a
+                                            class="mb-[5px] block text-lg font-semibold text-dark hover:text-primary dark:text-black xs:text-xl">
+                                            Stylish Women Bag
+                                        </a>
+                                    </h3>
+                                    <p class="text-lg font-medium text-dark dark:text-black">
+                                        £75.00
+                                    </p>
+                                    <div class="flex items-center justify-center gap-1 pb-5 pt-[18px]">
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button
+                                            class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-dark bg-amber-400">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="mx-auto h-full min-w-[300px] px-4 xs:min-w-[368px] sm:min-w-[510px] md:min-w-[340px] lg:min-w-[312px] xl:min-w-[282px] 2xl:min-w-[325px]">
+                            <div
+                                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 dark:bg-dark-2 dark:shadow-box-dark border-2 border-gray-100 ...">
+
+                                <div class="relative">
+                                    <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/product-carousel-02/image-01.jpg"
+                                        alt="product" class="w-full">
+                                    <span
+                                        class="absolute left-6 top-4 inline-flex items-center justify-center rounded bg-red-600 px-[10px] py-[3px] text-sm font-medium text-black">
+                                        Hot
+                                    </span>
+                                </div>
+
+                                <div class="px-6 pb-8 pt-6 text-center">
+                                    <h3>
+                                        <a
+                                            class="mb-[5px] block text-lg font-semibold text-dark hover:text-primary dark:text-black xs:text-xl">
+                                            Stylish Women Bag
+                                        </a>
+                                    </h3>
+                                    <p class="text-lg font-medium text-dark dark:text-black">
+                                        £75.00
+                                    </p>
+                                    <div class="flex items-center justify-center gap-1 pb-5 pt-[18px]">
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-star text-amber-400"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button
+                                            class="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-dark bg-amber-400">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 flex items-center justify-center space-x-4">
+                            <button
+                                class="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-300 text-body-color hover:border-primary hover:bg-primary text-black dark:border-dark-3 dark:bg-dark-2 dark:text-dark-6"
+                                :class=" activeSlide === 1 &amp;&amp; 'bg-primary' "
+                                @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft - ($refs.carousel.scrollWidth / slides.length); activeSlide -= 1">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button
+                                class="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-300 text-body-color hover:border-primary hover:bg-primary text-black dark:border-dark-3 dark:bg-dark-2 dark:text-dark-6"
+                                :class=" activeSlide === 1 &amp;&amp; 'bg-primary' "
+                                @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft + ($refs.carousel.scrollWidth / slides.length); activeSlide += 1">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+        <div class="container mx-auto">
+            <div class="mb-24">
+                <div class="-mx-4 flex flex-wrap items-center justify-center">
+                    <div class="w-full px-4 lg:w-1/2 2xl:w-5/12">
+                        <div class="mb-12 max-w-[465px] lg:mb-0">
+                            <span class="mb-4 block text-lg font-semibold text-blue-400 md:text-2xl">Start From
+                                $50</span>
+                            <h2
+                                class="mb-5 text-2xl font-semibold !leading-tight text-dark dark:text-black xl:text-4xl">
+                                New
+                                Arrival
+                                From
+                                Creative Clock Collections
+                            </h2>
+                            <p class="mb-9 text-base text-body-color dark:text-dark-6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                                sit amet molestie nunc. Vestibulum tempus justo et venenatis
+                                tempus. Nulla tincidunt,
+                            </p>
+                            <a
+                                class="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-[13px] text-center text-base font-medium text-black hover:bg-blue-dark">
+                                View All Items
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/2 2xl:w-5/12">
+                        <div>
+                            <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/recent-products-03/product-01.jpg"
+                                alt="Recent Product" class="w-full rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="-mx-4 flex flex-wrap items-center justify-center">
+                    <div class="order-last w-full px-4 lg:order-first lg:w-1/2 2xl:w-5/12">
+                        <div>
+                            <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/products/recent-products-03/product-02.jpg"
+                                alt="Recent Product" class="w-full rounded-lg">
+                        </div>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/2 2xl:w-5/12">
+                        <div class="mb-12 max-w-[465px] lg:mb-0 lg:ml-auto">
+                            <span class="mb-4 block text-lg font-semibold text-blue-500 md:text-2xl">
+                                Start From $49
+                            </span>
+                            <h2 class="mb-5 text-2xl font-semibold !leading-tight text-dark dark:text-bark xl:text-4xl">
+                                New Summer Collections For Man's Fashion.
+                            </h2>
+                            <p class="mb-9 text-base text-body-color dark:text-dark-6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                                sit amet molestie nunc. Vestibulum tempus justo et venenatis
+                                tempus. Nulla tincidunt,
+                            </p>
+                            <a
+                                class="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-[13px] text-center text-base font-medium text-white hover:bg-blue-dark">
+                                View All Items
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Shop By Category -->
+
+    <section class="bg-[#f7f8fa] pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px] ">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex">
+
+                <div class="w-full px-4">
+
+                    <div class="mx-auto mb-[60px] max-w[510px] text-center">
+                        <h2
+                            class="mb-4 text-3xl font-bold leading-[1.2] text-dark dark:text-black sm:text-4xl md:text-[40px]">
+                            Shop
+                            By Category
+                        </h2>
+                        <p class="text-base">There are many variations of passages of Lorem Ipsum available
+                            but the majority have suffered alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+                        <a class="group mb-10 block text-center">
+                            <div class="mb-5 overflow-hidden rounded-lg">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/categories/category-01/image-01.jpg"
+                                    alt="category" class="w-full">
+                            </div>
+                            <h3
+                                class="mb-1 text-xl font-semibold text-dark group-hover:text-primary dark:text-dark md:text-2xl lg:text-xl xl:text-2xl">
+                                Accessories
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                8 Products Available
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+                        <a class="group mb-10 block text-center">
+                            <div class="mb-5 overflow-hidden rounded-lg">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/categories/category-01/image-02.jpg"
+                                    alt="category" class="w-full">
+                            </div>
+                            <h3
+                                class="mb-1 text-xl font-semibold text-dark group-hover:text-primary dark:text-dark md:text-2xl lg:text-xl xl:text-2xl">
+                                Accessories
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                8 Products Available
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+                        <a class="group mb-10 block text-center">
+                            <div class="mb-5 overflow-hidden rounded-lg">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/categories/category-01/image-03.jpg"
+                                    alt="category" class="w-full">
+                            </div>
+                            <h3
+                                class="mb-1 text-xl font-semibold text-dark group-hover:text-primary dark:text-dark md:text-2xl lg:text-xl xl:text-2xl">
+                                Accessories
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                8 Products Available
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+                        <a class="group mb-10 block text-center">
+                            <div class="mb-5 overflow-hidden rounded-lg">
+                                <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/categories/category-01/image-04.jpg"
+                                    alt="category" class="w-full">
+                            </div>
+                            <h3
+                                class="mb-1 text-xl font-semibold text-dark group-hover:text-primary dark:text-dark md:text-2xl lg:text-xl xl:text-2xl">
+                                Accessories
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                8 Products Available
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
+                    <a
+                        class="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-[13px] text-center text-base font-medium text-white hover:bg-blue-dark">
+                        Explore All Category
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Recent News -->
+
+    <section class="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex flex-wrap justify-center">
+                <div class="w-full px-4">
+                    <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+                        <span class="mb-2 block text-lg font-semibold text-blue-500">Our Blogs</span>
+                        <h2 class="mb-4 text-3xl font-bold text-dark dark:text-dark sm:text-4xl md:text-[40px]">Our
+                            Recent
+                            News
+                        </h2>
+                        <p class="text-base text-body-color dark:text-dark-6">There are many variations of passages of
+                            Lorem Ipsum available
+                            but the majority have suffered alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div class="mb-10 w-full">
+                        <div class="mb-8 overflow-hidden rounded">
+                            <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/blogs/blog-01/image-01.jpg"
+                                class="w-full">
+                        </div>
+                        <div>
+                            <span
+                                class="mb-5 inline-block rounded bg-blue-500 px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-dark sm:text-2xl lg:text-xl xl:text-2xl">
+                                    Meet AutoManage, the best AI management tools
+                                </a>
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div class="mb-10 w-full">
+                        <div class="mb-8 overflow-hidden rounded">
+                            <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/blogs/blog-01/image-01.jpg"
+                                class="w-full">
+                        </div>
+                        <div>
+                            <span
+                                class="mb-5 inline-block rounded bg-blue-500 px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-dark sm:text-2xl lg:text-xl xl:text-2xl">
+                                    Meet AutoManage, the best AI management tools
+                                </a>
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div class="mb-10 w-full">
+                        <div class="mb-8 overflow-hidden rounded">
+                            <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/blogs/blog-01/image-01.jpg"
+                                class="w-full">
+                        </div>
+                        <div>
+                            <span
+                                class="mb-5 inline-block rounded bg-blue-500 px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-dark sm:text-2xl lg:text-xl xl:text-2xl">
+                                    Meet AutoManage, the best AI management tools
+                                </a>
+                            </h3>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section  -->
+
+    <footer class="bg-white dark:bg-dark-2">
+        <div class="border-b border-stroke pt-[60px] dark:border-dark-3 md:pt-0">
+            <div class="container mx-auto">
+                <div class="-mx-4 flex flex-wrap">
+                    <div class="w-full px-4 md:w-1/3">
+                        <div class="mb-[60px] text-center md:mt-[60px]">
+                            <div
+                                class="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-gray-100 shadow-1 dark:bg-dark-2 dark:shadow-none">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <div>
+                                <h3 class="mb-[10px] text-xl font-semibold text-dark dark:text-dark xl:text-2xl">
+                                    Free delivery
+                                </h3>
+                                <p class="mx-auto max-w-[275px] text-base text-body-color dark:text-dark-6">
+                                    Lorem ipsum dolor sit amet, consect adipiscing eliteget lorem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full px-4 md:w-1/3 md:border-x md:border-stroke md:dark:border-dark-3">
+                        <div class="mb-[60px] text-center md:mt-[60px]">
+                            <div
+                                class="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-gray-100 shadow-1 dark:bg-dark-2 dark:shadow-none">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="mb-[10px] text-xl font-semibold text-dark dark:text-dark xl:text-2xl">
+                                    Online Payment
+                                </h3>
+                                <p class="mx-auto max-w-[275px] text-base text-body-color dark:text-dark-6">
+                                    Lorem ipsum dolor sit amet, consect adipiscing eliteget lorem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full px-4 md:w-1/3">
+                        <div class="mb-[60px] text-center md:mt-[60px]">
+                            <div
+                                class="mx-auto mb-7 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-gray-100 shadow-1 dark:bg-dark-2 dark:shadow-none">
+                                <i class="fa-solid fa-circle-notch"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="mb-[10px] text-xl font-semibold text-dark dark:text-dark xl:text-2xl">
+                                    Easy Return.
+                                </h3>
+                                <p class="mx-auto max-w-[275px] text-base text-body-color dark:text-dark-6">
+                                    Lorem ipsum dolor sit amet, consect adipiscing eliteget lorem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="container mx-auto ">
+                        <div class="-mx-4 flex flex-wrap">
+                            <div class="w-full px-4 md:w-1/2 lg:w-5/12 xl:w-4/12">
+                                <div class="mb-16 max-w-[270px]">
+                                    <a class="mb-8 inline-block">
+                                        <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/logo/logo.svg"
+                                            alt="logo" class="max-w-full dark:hidden">
+                                        <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/images/logo/logo.svg"
+                                            alt="logo" class="hidden max-w-full dark:block">
+                                    </a>
+
+                                    <div class="space-y-4">
+                                        <p class="flex text-base text-body-color dark:text-dark-6">
+                                            <span class="mt-1 pr-5">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </span>
+
+                                            <span> Shop 009A, Level 4, Block A, Demo Park, Ottawa </span>
+                                        </p>
+                                        <p class="flex items-center text-base text-body-color dark:text-dark-6">
+                                            <span class="pr-5">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </span>
+
+                                            <span> +1-613-555-0182 </span>
+                                        </p>
+                                        <p class="flex items-center text-base text-body-color dark:text-dark-6">
+                                            <span class="pr-5">
+                                                <i class="fa-solid fa-envelopes-bulk"></i>
+                                            </span>
+
+                                            <span> contact@yourmail.com </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+                                <div class="mb-16">
+                                    <h3 class="mb-9 text-2xl font-semibold text-dark dark:text-dark">
+                                        My Account
+                                    </h3>
+
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                My Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                My Order History
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                Order Tracking
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                Shopping Cart
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
+                                <div class="mb-16">
+                                    <h3 class="mb-9 text-2xl font-semibold text-dark dark:text-dark">
+                                        Shop Departments
+                                    </h3>
+
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                Computers &amp; Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                Smartphones &amp; Tablets
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                TV, Video &amp; Audio
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-base text-body-color hover:text-primary dark:text-dark-6">
+                                                Cameras, Photo &amp; Video
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="w-full px-4 md:w-1/2 lg:w-6/12 xl:w-3/12">
+                                <div class="mb-16">
+                                    <h3 class="mb-10 text-2xl font-semibold text-dark dark:text-dark">
+                                        Download App
+                                    </h3>
+
+                                    <div class="sm:flex md:block lg:flex xl:block">
+                                        <a href="javascript:void(0)"
+                                            class="mb-3 mr-3 flex w-full max-w-[230px] items-center rounded-[5px] bg-primary px-5 py-2 hover:bg-blue-dark">
+                                            <span class="block pr-[10px]">
+                                                <i class="fa-solid fa-envelopes-bulk"></i>
+                                            </span>
+
+                                            <span class="text-dark">
+                                                <span class="text-sm">Download from</span>
+                                                <span class="block text-base font-semibold">
+                                                    Apple App Store
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="javascript:void(0)"
+                                            class="mb-3 mr-3 flex w-full max-w-[230px] items-center rounded-[5px] bg-dark px-[22px] py-2 hover:bg-opacity-90 dark:bg-dark-2">
+                                            <span class="block pr-[14px]">
+                                                <i class="fa-solid fa-envelopes-bulk"></i>
+                                            </span>
+
+                                            <span class="text-dark">
+                                                <span class="text-sm">Get It On</span>
+                                                <span class="block text-base font-semibold">
+                                                    Google Play Store
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="border-t border-stroke py-8 dark:border-dark-3">
+            <div class="container mx-auto">
+                <div class="text-center">
+                    <div class="mb-5">
+                        <img src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/footers/footer-04/payment.svg"
+                            alt="payment" class="mx-auto max-w-full">
+                    </div>
+                    <p class="text-base text-body-color dark:text-dark-6">
+                        © 2024 TailGrids. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 </body>
 

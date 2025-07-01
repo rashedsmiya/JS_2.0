@@ -1,7 +1,29 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Frontend Routes Start
+|--------------------------------------------------------------------------
+*/
+
+use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\TeamController;
+use App\Http\Controllers\frontend\BlogController;
+use App\Http\Controllers\frontend\CourseController;
+use App\Http\Controllers\frontend\ContactController;
+
+use App\Http\Controllers\ErrorController;
+
+/*
+|--------------------------------------------------------------------------
+| Frontend Routes Close
+|--------------------------------------------------------------------------
+*/
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +36,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');  
-    return view('auth.login');
-});
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
 
-Route::get('/dashboard', function () {
-    // return view('dashboard');
-    return view('admin.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+/*
+|--------------------------------------------------------------------------
+| Frontend Routes Start
+|--------------------------------------------------------------------------
+*/
 
-require __DIR__ . '/auth.php';
+Route::get('/', [HomeController::class, 'index'])->name('/');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/course', [CourseController::class, 'index'])->name('course');
+Route::get('/course-details', [CourseController::class, 'details'])->name('course.course-details');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog-details', [BlogController::class, 'details'])->name('blog.blog-details');
+Route::get('/team', [TeamController::class, 'index'])->name('team');
+Route::get('/team-details', [TeamController::class, 'details'])->name('team.team-details');
+Route::get('/conatct', [ContactController::class, 'index'])->name('contact');
+
+
+/*
+|--------------------------------------------------------------------------
+| Frontend Routes End
+|--------------------------------------------------------------------------
+*/

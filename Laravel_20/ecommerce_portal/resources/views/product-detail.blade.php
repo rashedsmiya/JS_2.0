@@ -1,4 +1,14 @@
 @extends('layouts.main')
+
+@push('title')
+<title>Product Detail</title>
+@endpush
+
+@section('content')
+<div class="container-fluid bg-light p-5">
+    <h1 class="text-center"><i class="fa-solid fa-layer-group"></i> Product Details</h1>
+</div>
+@extends('layouts.main')
 @push('title')
 <title>Home Page</title>
 @endpush
@@ -517,3 +527,5 @@
 </body>
 
 </html>
+
+@endsection

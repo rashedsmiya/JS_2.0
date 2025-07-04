@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="container-full bg-white p-5">
-    <h1 class="text-center"><i class="fa-solid fa-layer-group"></i> Category</h1>
+    <h1 class="text-center"><i class="fa-solid fa-layer-group"></i>Sub Category</h1>
 </div>
 
 
@@ -20,7 +20,7 @@
             <!-- Product Card -->
             <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4">
                 <img src="https://images.unsplash.com/photo-1741850821397-ed0e5d9bc125?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" class="rounded-lg mb-4 w-full h-48 object-cover">
-                <h3 class="text-lg font-semibold text-gray-800 text-center">Product Name</h3>
+                <h3 class="text-lg font-semibold text-gray-800 text-center"><a href="{{url('category/electronics/tv/detail')}}">Product Name</a></h3>
                 <p class="text-gray-600 text-sm mb-2 text-center">Short product description goes here.</p>
 
                 <div class="flex justify-between items-center mt-4 ">

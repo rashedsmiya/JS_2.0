@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-
+         
   <!-- Product Description -->
   <div class="mt-10">
     <h3 class="text-xl font-semibold mb-2">Product Description</h3>
